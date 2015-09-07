@@ -1,0 +1,337 @@
+@font-face{
+	font-family: 'Instruction';
+	src : url('../fonts/Instruction.otf');
+}
+
+
+html, body{
+	text-align: center;
+	font-family: 'Instruction';
+	min-height : 100%;
+}
+
+h2{
+	margin-bottom: 70px;
+	letter-spacing: 0.1em;
+	
+}
+
+h3{
+	margin-top: 0;
+}
+
+.titre{
+	margin-bottom: 50px;
+	letter-spacing: 0.3em;
+	background-color: #4C688A;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-radius: 10px;
+	color: black;
+}
+
+.case{
+	border : 3px solid black;
+	position: relative;
+	width: 33%;
+	height : 150px;
+	line-height: 150px;
+	padding: 0;
+	font-size: 4.5em;
+}
+
+.case:hover{
+	cursor: pointer;
+}
+
+.c1,.c2,.c3{
+	border-top: none;
+}
+
+.c7,.c8,.c9{
+	border-bottom: none;
+}
+
+.c1,.c4,.c7{
+	border-left: none;
+}
+
+.c3,.c6,.c9{
+	border-right: none;
+}
+
+.stockPionsJ1, .stockPionsJ2{
+	font-size: 4.5em;
+	background-color: transparent;
+	border : none;
+	outline : none;
+}
+
+.stockPionsJ1{
+	color : #4C688A;
+}
+
+.stockPionsJ2{
+	color : #37B06D;
+}
+
+
+
+.play{
+	margin-top: 70px;
+	background-color: #37B06D;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-radius: 10px;
+}
+
+#play{
+	color: black;
+	letter-spacing: 0.3em;
+	background-color: transparent;
+	border: 0;
+	outline: none;
+}
+
+#play:hover{
+	color :  #4C688A;
+	text-decoration: none;
+}
+
+.my-modal{
+	background-color: white;
+    border: none;
+    border-radius: 10px;
+    display: none;
+    position : fixed;
+ }
+
+.pion{
+	background-color: transparent;
+	font-size: 2em;
+	border : none;
+	outline : none;
+} 
+
+.couleur{
+	height : 50px;
+	width : 50px;
+	border : none;
+	border-radius: 10px;
+	outline : none;
+}
+
+.couleur:hover{
+	border : 2px solid black;
+}
+
+.pion:hover{
+	color : #4C688A;
+} 
+
+
+#couleur1J1, #couleur1J2{
+	background-color: #EFC332;   /*jaune*/
+}
+
+#couleur2J1, #couleur2J2{        
+	background-color: #D96E32;    /*orange clair*/
+}
+
+#couleur3J1, #couleur3J2{
+	background-color: #34475E;        /*bleu*/
+}
+
+#couleur4J1, #couleur4J2{
+	background-color: #DF432F;          /*orange foncé*/
+}
+
+#couleur5J1, #couleur5J2{             /*vert*/
+	background-color: #37B06D;
+}
+
+#couleur6J1, #couleur6J2{             /*taupe*/
+	background-color: #4F4C41;
+}
+
+.choix1, .choix2{
+	font-size: 2em;
+	color: black;
+	margin : 30px 0;
+}
+
+.titre-modal{
+	font-size: 2em;
+	border-bottom : 2px solid black;
+	color: black;
+}
+
+.ok-pions, .ok-couleurs{
+	background-color: transparent;
+	height : 2em;
+	text-align: center;
+	font-family: 'Instruction';
+	font-size: 2em;
+	color : black;
+	border: 0;
+	outline : none !important;
+}
+
+.modal-footer{
+	border-top : 2px solid black;
+	text-align: center;
+}
+
+
+@media screen and (max-width: 474px){
+
+	.sous-titre{
+		padding-bottom: 20px;
+	}
+
+	.stockPionsJ1, .stockPionsJ2{
+		font-size: 3em;
+	} 
+
+	.scoreJ1, .scoreJ2, .J1, .J2{
+		font-size: 2em;
+		padding-top: 20px;
+	}
+
+	.pion{
+		font-size: 1.5em;
+		padding: 0;
+	}
+
+	.couleur{
+		height: 30px;
+		width: 30px;
+	}
+
+	body{
+		font-size: 1em;
+		}
+
+
+	.grille{
+		margin: auto ;
+		padding: 15px 15%;
+	}
+
+	h2{
+		margin-bottom: 0;
+		font-size: 2.2em;
+	}
+
+	h3{
+		font-size: 2.2em;
+	}
+
+	.titre{
+		margin-bottom: 0;
+		margin: 15px 15px; 
+		font-size: 3em;
+	}
+
+	
+	.play{
+		margin-top: 15px;
+		font-size: 2.5em;
+		margin: 15px 15px; 
+	}
+
+	.case i{
+		font-size: 1em;
+		
+	}
+}
+
+
+@media screen and (min-width: 474px) and (max-width: 768px){
+	body{
+		font-size: 1em;
+
+	}
+
+	.stockPionsJ1, .stockPionsJ2{
+		width: 100%;
+		display : block;
+		font-size: 3em;
+	}
+
+	.sous-titre{
+		font-size: 2em;
+		margin: 20px;
+	}
+
+	.titre{
+		margin-bottom: 0;
+		margin: 15px 15px; 
+		font-size: 3em;
+	}
+
+	
+	.play{
+		margin-top: 15px;
+		font-size: 2.5em;
+		margin: 15px 15px; 
+	}
+
+	.J1, .scoreJ1, .J2, .scoreJ2{
+		font-size: 2em;
+	}
+
+	.case i{
+	font-size: 3.5em;
+	line-height: 2.2em;
+	}
+
+	.my-modal{
+		font-size: 0.8em;
+	}
+	
+	.modal-header{
+		display: none;
+	}
+
+	.choix1, .choix2{
+		margin :0 ;
+
+	}
+
+	.couleur{
+		height : 30px;
+		width : 30px;
+	}
+
+	.score{
+		display: none;
+	}
+
+	.case i{
+		font-size: 1em;
+		
+	}
+
+
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+
+
+	.stockPionsJ1, .stockPionsJ2{
+		font-size: 3em;
+		display : block;
+		width: 100%;
+	} 
+}
+
+@media screen and (min-width: 991px){
+
+	.stockPionsJ1, .stockPionsJ2{
+		display: block;
+		width: 100%;
+	}
+}
+
