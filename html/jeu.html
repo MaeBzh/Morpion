@@ -1,0 +1,147 @@
+ <!DOCTYPE html>
+ <html>
+    
+    <head>
+		<!-- META -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Morpion</title>
+        
+		<!-- JAVASCRIPT -->
+        <script type="text/javascript" src="../js/jquery/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="../js/bootstrap/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../js/modal_effects/custombox.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+
+
+        <!-- CSS -->
+        <link type="text/css" rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
+        <link type="text/css" rel="stylesheet" href="../css/icomoon.css" />
+        <link type="text/css" rel="stylesheet" href="../css/bootstrap/bootstrap.min.css" />
+        <link type="text/css" rel="stylesheet" href="../css/bootstrap/bootstrap-theme.min.css" />
+        <link type="text/css" rel="stylesheet" href="../css/bootstrap/bootstrap_ms.css" />
+        <link type="text/css" rel="stylesheet" href="../css/modal_effects/custombox.min.css" />
+        <link type="text/css" rel="stylesheet" href="../css/jeu.css" />
+
+
+    </head>
+
+    <body>
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-sm-12"><h1 class="titre">Morpion</h1></div>
+                <div class="col-sm-12 text-center"><h2 class="sous-titre">Alignez trois pions</h2></div>
+    		</div>
+
+    		<div class="row">
+    			<div class="col-sm-3 col-ms-3 col-xs-12">
+                    <h3>
+                        <span>J1 </span>
+                        <span class="score">Score</span>
+                        <span class="pointsJ1">: 0</span>
+                    </h3>
+        			<button class='stockPionsJ1'><i class='fa fa-times'></i></button>
+        			<button class='stockPionsJ1'><i class='fa fa-times'></i></button>
+                    <button class='stockPionsJ1'><i class='fa fa-times'></i></button>
+                    <button class='stockPionsJ1'><i class='fa fa-times'></i></button>
+                    <button class='stockPionsJ1'><i class='fa fa-times'></i></button>
+    			</div>
+    			<div class="col-sm-6 col-ms-6 col-xs-12 grille">
+                    <div class="col-xs-4 case c1" id="0"><i class=""></i></div>
+    				<div class="col-xs-4 case c2" id="1"><i class=""></i></div>
+    				<div class="col-xs-4 case c3" id="2"><i class=""></i></div>
+                	<div class="col-xs-4 case c4" id="3"><i class=""></i></div>
+    				<div class="col-xs-4 case c5" id="4"><i class=""></i></div>
+    				<div class="col-xs-4 case c6" id="5"><i class=""></i></div>
+                	<div class="col-xs-4 case c7" id="6"><i class=""></i></div>
+    				<div class="col-xs-4 case c8" id="7"><i class=""></i></div>
+    				<div class="col-xs-4 case c9" id="8"><i class=""></i></div> 
+                </div>
+    			<div class="col-sm-3 col-ms-3 col-xs-12">
+                    <h3>
+                        <span>J2 </span>
+                        <span class="score">Score</span>
+                        <span class="pointsJ2"> : 0</span>
+                    </h3>
+    				<button class='stockPionsJ2'><i class='fa fa-circle-o'></i></button>
+    				<button class='stockPionsJ2'><i class='fa fa-circle-o'></i></button>
+    				<button class='stockPionsJ2'><i class='fa fa-circle-o'></i></button>
+    				<button class='stockPionsJ2'><i class='fa fa-circle-o'></i></button>
+    				<button class='stockPionsJ2'><i class='fa fa-circle-o'></i></button>
+    			</div>
+    		</div> <!-- End row-->
+
+    		<div class="row">
+    			<h1 class="play"><button id="play">Play</button></h1>
+    		</div>
+
+    		         
+    	</div>   <!-- End container-->
+
+    	<div id="modalPions" class="my-modal">
+    		<div id="content" class="modal-dialog">
+                <div class="modal-header titre-modal">
+                    <p>Choisissez vos pions...</p>
+                </div>
+                <div class="modal-body">
+                    <div class="choix1">
+                        <p>Joueur 1 :</p>
+                        <button type="button" class="fa fa-times    pion choixPionJ1" id="pion1J1"></button>
+                        <button type="button" class="fa fa-heart    pion choixPionJ1" id="pion2J1"></button>
+                        <button type="button" class="fa fa-beer     pion choixPionJ1" id="pion3J1"></button>
+                        <button type="button" class="fa fa-apple    pion choixPionJ1" id="pion4J1"></button>
+                        <button type="button" class="fa fa-dribbble pion choixPionJ1" id="pion5J1"></button>
+                        <button type="button" class="fa fa-sun-o    pion choixPionJ1" id="pion6J1"></button>
+                        
+                    </div>
+                    <div class="choix2">
+                        <p>Joueur 2 :</p>
+                        <button type="button" class="fa fa-circle-o     pion choixPionJ2" id="pion1J2"></button>
+                        <button type="button" class="fa fa-star-o       pion choixPionJ2" id="pion2J2"></button>
+                        <button type="button" class="fa fa-glass        pion choixPionJ2" id="pion3J2"></button>
+                        <button type="button" class="fa fa-android      pion choixPionJ2" id="pion4J2"></button>
+                        <button type="button" class="fa fa-futbol-o     pion choixPionJ2" id="pion5J2"></button>
+                        <button type="button" class="fa fa-moon-o       pion choixPionJ2" id="pion6J2"></button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="ok-pions">Suivant</button>
+                </div>
+		    </div><!-- /.modal-dialog -->
+		</div>
+
+        <div id="modalCouleurs" class="my-modal">
+            <div id="content" class="modal-dialog">
+                <div class="modal-header titre-modal">
+                    <p>...Et votre couleur</p>
+                </div>
+                <div class="modal-body">
+                    <div class="choix1">
+                        <p>Joueur 1 :</p>
+                        <button type="button" class="couleur choixCouleurJ1" id="couleur1J1"></button>
+                        <button type="button" class="couleur choixCouleurJ1" id="couleur2J1"></button>
+                        <button type="button" class="couleur choixCouleurJ1" id="couleur3J1"></button>
+                        <button type="button" class="couleur choixCouleurJ1" id="couleur4J1"></button>
+                        <button type="button" class="couleur choixCouleurJ1" id="couleur5J1"></button>
+                        <button type="button" class="couleur choixCouleurJ1" id="couleur6J1"></button>
+                    </div>
+                    <div class="choix2">
+                        <p>Joueur 2 :</p>
+                        <button type="button" class="couleur choixCouleurJ2" id="couleur1J2"></button>
+                        <button type="button" class="couleur choixCouleurJ2" id="couleur2J2"></button>
+                        <button type="button" class="couleur choixCouleurJ2" id="couleur3J2"></button>
+                        <button type="button" class="couleur choixCouleurJ2" id="couleur4J2"></button>
+                        <button type="button" class="couleur choixCouleurJ2" id="couleur5J2"></button>
+                        <button type="button" class="couleur choixCouleurJ2" id="couleur6J2"></button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="ok-couleurs">Commencez !</button>
+                </div>
+            </div><!-- /.modal-dialog -->
+        </div>
+
+        <script type="text/javascript" src="../js/jeu.js"></script>
+    	
+    </body>
+</html>
